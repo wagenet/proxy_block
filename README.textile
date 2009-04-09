@@ -32,17 +32,18 @@ h3. Standard behavior is maintained
 <pre><code>
   w = Wrapper.new
   w.wrap{ w.hello }
-  # => word start
+  # => wrap start
   # => hello world
-  # => world end
+  # => wrap end
 </code></pre>
 
 
 h3. Proxy Form
+
 <pre><code>
   w = Wrapper.new
   w.wrap.hello
-  # => word start
+  # => wrap start
   # => hello world
-  # => world end
+  # => wrap end
 </code></pre>
