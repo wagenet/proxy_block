@@ -1,0 +1,48 @@
+h1. ProxyBlock
+
+h2. Overview
+
+Simply modify methods that take a block to also provide a proxy
+
+
+h2. Usage
+
+h3. Example Classes
+
+<pre><code>
+  class Wrapper
+
+    def hello
+      puts 'hello world'
+    end
+
+    def wrap(word = 'wrap')
+      puts "#{word} start"
+      yield
+      puts "#{word} end"
+    end
+    proxy_block :wrap
+    
+  end
+</code></pre>
+
+  
+h3. Standard behavior is maintained
+
+<pre><code>
+  w = Wrapper.new
+  w.wrap{ w.hello }
+  # => word start
+  # => hello world
+  # => world end
+</code></pre>
+
+
+h3. Proxy Form
+<pre><code>
+  w = Wrapper.new
+  w.wrap.hello
+  # => word start
+  # => hello world
+  # => world end
+</code></pre>
