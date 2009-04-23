@@ -2,7 +2,7 @@
 
 Gem::Specification.new do |s|
   s.name = 'proxy_block'
-  s.version = '0.1'
+  s.version = '0.1.1.1'
   s.summary = 'Simply modify methods that take a block to also provide a proxy'
 #    s.description = ''
   s.files = Dir['[A-Z]*', 'lib/**/*.rb']
